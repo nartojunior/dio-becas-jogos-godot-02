@@ -1,0 +1,53 @@
+[gd_scene load_steps=5 format=3 uid="uid://dovfnxreikqhs"]
+
+[ext_resource type="PackedScene" uid="uid://deoixmrq6krhs" path="res://Prefabs/box_regular.tscn" id="1_22r2k"]
+[ext_resource type="Script" path="res://Scripts/game_manager.gd" id="1_prsnf"]
+[ext_resource type="PackedScene" uid="uid://bifcqfltfp275" path="res://Prefabs/box_bouncy.tscn" id="3_vejej"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m73c3"]
+size = Vector2(1080, 32)
+
+[node name="World" type="Node2D"]
+
+[node name="GameManager" type="Node" parent="."]
+script = ExtResource("1_prsnf")
+box_templates = Array[PackedScene]([ExtResource("1_22r2k"), ExtResource("3_vejej")])
+box_template = ExtResource("1_22r2k")
+
+[node name="Background" type="ColorRect" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_right = 1080.0
+offset_bottom = 720.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.258849, 0.370945, 1, 1)
+
+[node name="Ground" type="StaticBody2D" parent="."]
+position = Vector2(0, 688)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground"]
+position = Vector2(540, 16)
+shape = SubResource("RectangleShape2D_m73c3")
+
+[node name="Ground" type="ColorRect" parent="Ground/CollisionShape2D"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -540.0
+offset_top = -16.0
+offset_right = 540.0
+offset_bottom = 16.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.83, 0.3652, 0.249, 1)
+
+[node name="Box Regular" parent="." instance=ExtResource("1_22r2k")]
+
+[node name="Box Bouncy" parent="." instance=ExtResource("3_vejej")]
+position = Vector2(507, 139)

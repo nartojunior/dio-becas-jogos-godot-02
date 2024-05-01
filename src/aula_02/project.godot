@@ -10,11 +10,12 @@ config_version=5
 
 [application]
 
-config/name="dio-becas-2024-godot"
-config/version="0.0.0"
+config/name="Primeira Experiência"
+run/main_scene="res://Scenes/title.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
 
 [display]
 
-window/size/mode=3
+window/size/viewport_width=1080
+window/size/viewport_height=720

@@ -1,0 +1,73 @@
+[gd_scene load_steps=3 format=3 uid="uid://csfqs2h8fbnaf"]
+
+[ext_resource type="Texture2D" uid="uid://dyadxu56yawx0" path="res://icon.svg" id="1_4ch4d"]
+[ext_resource type="Script" path="res://Scripts/player.gd" id="2_oiynx"]
+
+[node name="World2D" type="Node2D"]
+
+[node name="Ground" type="ColorRect" parent="."]
+offset_left = -48.0
+offset_top = -23.0
+offset_right = 1112.0
+offset_bottom = 753.0
+color = Color(0.5, 0.291667, 0, 1)
+
+[node name="Player" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(304, 201)
+texture = ExtResource("1_4ch4d")
+script = ExtResource("2_oiynx")
+speed = 200.0
+metadata/oi = 0
+
+[node name="Node2D" type="Node2D" parent="."]
+z_index = 2
+
+[node name="Tree" type="ColorRect" parent="Node2D"]
+offset_left = 422.0
+offset_top = 37.0
+offset_right = 487.0
+offset_bottom = 160.0
+color = Color(0.1188, 0.54, 0.23814, 1)
+
+[node name="Tree2" type="ColorRect" parent="Node2D"]
+offset_left = 532.0
+offset_top = 195.0
+offset_right = 597.0
+offset_bottom = 318.0
+color = Color(0.1188, 0.54, 0.23814, 1)
+
+[node name="Tree3" type="ColorRect" parent="Node2D"]
+offset_left = 211.0
+offset_top = 413.0
+offset_right = 276.0
+offset_bottom = 536.0
+color = Color(0.1188, 0.54, 0.23814, 1)
+
+[node name="Tree4" type="ColorRect" parent="Node2D"]
+offset_left = 402.0
+offset_top = 481.0
+offset_right = 467.0
+offset_bottom = 604.0
+color = Color(0.1188, 0.54, 0.23814, 1)
+
+[node name="Tree5" type="ColorRect" parent="Node2D"]
+offset_left = 648.0
+offset_top = 462.0
+offset_right = 713.0
+offset_bottom = 585.0
+color = Color(0.1188, 0.54, 0.23814, 1)
+
+[node name="Tree6" type="ColorRect" parent="Node2D"]
+offset_left = 805.0
+offset_top = 182.0
+offset_right = 870.0
+offset_bottom = 305.0
+color = Color(0.1188, 0.54, 0.23814, 1)
+
+[node name="Tree7" type="ColorRect" parent="Node2D"]
+offset_left = 946.0
+offset_top = 434.0
+offset_right = 1011.0
+offset_bottom = 557.0
+color = Color(0.1188, 0.54, 0.23814, 1)

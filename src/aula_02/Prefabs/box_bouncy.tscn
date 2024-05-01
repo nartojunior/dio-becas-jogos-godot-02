@@ -1,0 +1,30 @@
+[gd_scene load_steps=3 format=3 uid="uid://bifcqfltfp275"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_r0f76"]
+friction = 0.4
+bounce = 0.8
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jc38k"]
+size = Vector2(64, 64)
+
+[node name="Box Bouncy" type="RigidBody2D"]
+position = Vector2(473, 265)
+physics_material_override = SubResource("PhysicsMaterial_r0f76")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_jc38k")
+
+[node name="ColorRect" type="ColorRect" parent="CollisionShape2D"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -32.0
+offset_top = -32.0
+offset_right = 32.0
+offset_bottom = 32.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(32, 32)
+color = Color(0.88, 0.0528, 0.769707, 1)
