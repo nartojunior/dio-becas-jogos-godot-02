@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://crqa82ah78sk5"
-path="res://.godot/imported/laserPink3.png-15f546c7d53ba7d54a06cf4c9cbf037c.ctex"
+path="res://.godot/imported/laserPink3.png-780ca49e93b9c4a00cac4535ee6f3122.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://addons/Kenney Assets/kenney_alien-ufo-pack/PNG/laserPink3.png"
-dest_files=["res://.godot/imported/laserPink3.png-15f546c7d53ba7d54a06cf4c9cbf037c.ctex"]
+source_file="res://Addons/Kenney Assets/kenney_alien-ufo-pack/PNG/laserPink3.png"
+dest_files=["res://.godot/imported/laserPink3.png-780ca49e93b9c4a00cac4535ee6f3122.ctex"]
 
 [params]
 

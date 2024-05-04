@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bm7s8ysjfemx4"
-path="res://.godot/imported/shipBlue.png-5208a7465147fb71c4bcc6130b4afb42.ctex"
+path="res://.godot/imported/shipBlue.png-bacf18acfed8efeb2ff45a06d1bcf0ac.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://addons/Kenney Assets/kenney_alien-ufo-pack/PNG/shipBlue.png"
-dest_files=["res://.godot/imported/shipBlue.png-5208a7465147fb71c4bcc6130b4afb42.ctex"]
+source_file="res://Addons/Kenney Assets/kenney_alien-ufo-pack/PNG/shipBlue.png"
+dest_files=["res://.godot/imported/shipBlue.png-bacf18acfed8efeb2ff45a06d1bcf0ac.ctex"]
 
 [params]
 

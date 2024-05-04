@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c3fjxv6hmsns5"
-path="res://.godot/imported/dome.png-e92a17e2845f755c2a7b0c2328b50f72.ctex"
+path="res://.godot/imported/dome.png-c16b1a640588c02ce11ae2f089cb35d7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://addons/Kenney Assets/kenney_alien-ufo-pack/PNG/dome.png"
-dest_files=["res://.godot/imported/dome.png-e92a17e2845f755c2a7b0c2328b50f72.ctex"]
+source_file="res://Addons/Kenney Assets/kenney_alien-ufo-pack/PNG/dome.png"
+dest_files=["res://.godot/imported/dome.png-c16b1a640588c02ce11ae2f089cb35d7.ctex"]
 
 [params]
 

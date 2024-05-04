@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://6gr401e8fjvh"
-path="res://.godot/imported/spritesheet_spaceships.png-6d422edba5ee8d796ba80d4fbe980259.ctex"
+path="res://.godot/imported/spritesheet_spaceships.png-d461f506c7304704e32bf89fed7351f2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://addons/Kenney Assets/kenney_alien-ufo-pack/Spritesheets/spritesheet_spaceships.png"
-dest_files=["res://.godot/imported/spritesheet_spaceships.png-6d422edba5ee8d796ba80d4fbe980259.ctex"]
+source_file="res://Addons/Kenney Assets/kenney_alien-ufo-pack/Spritesheets/spritesheet_spaceships.png"
+dest_files=["res://.godot/imported/spritesheet_spaceships.png-d461f506c7304704e32bf89fed7351f2.ctex"]
 
 [params]
 

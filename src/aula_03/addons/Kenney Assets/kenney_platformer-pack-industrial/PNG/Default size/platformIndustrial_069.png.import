@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dn4to8tup6qmo"
-path="res://.godot/imported/platformIndustrial_069.png-345ccc8d92b77fd7e3ced816b66dda66.ctex"
+path="res://.godot/imported/platformIndustrial_069.png-ea8ef1ef2950e345756e76b49fb63c9b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://addons/Kenney Assets/kenney_platformer-pack-industrial/PNG/Default size/platformIndustrial_069.png"
-dest_files=["res://.godot/imported/platformIndustrial_069.png-345ccc8d92b77fd7e3ced816b66dda66.ctex"]
+source_file="res://Addons/Kenney Assets/kenney_platformer-pack-industrial/PNG/Default size/platformIndustrial_069.png"
+dest_files=["res://.godot/imported/platformIndustrial_069.png-ea8ef1ef2950e345756e76b49fb63c9b.ctex"]
 
 [params]
 
