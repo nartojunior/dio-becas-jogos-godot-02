@@ -13,8 +13,6 @@
             "debug_paths": false,
             "debug_navigation": false,
             "additional_options": "",
-            "address": "127.0.0.1",
-	        "port": 6007
         }
     ]
 }
