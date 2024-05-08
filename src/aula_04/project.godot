@@ -15,6 +15,14 @@ run/main_scene="res://Scenes/Game/main.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+GameManager="*res://Scripts/AutoLoad/game_manager.gd"
+
+[dotnet]
+
+project/assembly_name="Tiny Swords"
+
 [input]
 
 move_left={

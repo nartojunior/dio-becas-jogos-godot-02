@@ -1,7 +1,8 @@
-[gd_scene load_steps=13 format=3 uid="uid://d0qj61w7gurak"]
+[gd_scene load_steps=17 format=3 uid="uid://d0qj61w7gurak"]
 
 [ext_resource type="Texture2D" uid="uid://dd21hxy81najc" path="res://Addons/Tiny Swords (Update 010)/Factions/Knights/Troops/Warrior/Blue/Warrior_Blue.png" id="1_3g3it"]
-[ext_resource type="Script" path="res://Scripts/Player.gd" id="1_iaqna"]
+[ext_resource type="Script" path="res://Scripts/player.gd" id="1_iaqna"]
+[ext_resource type="PackedScene" uid="uid://b6qrfrd8c6b1x" path="res://Prefabs/skull.tscn" id="2_4t8jh"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_h57mp"]
 
@@ -35,6 +36,50 @@ tracks/0/keys = {
 "update": 1,
 "values": [Vector2i(0, 4), Vector2i(1, 4), Vector2i(2, 4), Vector2i(3, 4), Vector2i(4, 4), Vector2i(5, 4)]
 }
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.3),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"deal_damage_to_enemies"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_m1moo"]
+resource_name = "attack_down_2"
+length = 0.6
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("WarriorBlue:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [Vector2i(0, 5), Vector2i(1, 5), Vector2i(2, 5), Vector2i(3, 5), Vector2i(4, 5), Vector2i(5, 5)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.3),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"deal_damage_to_enemies"
+}]
+}
 
 [sub_resource type="Animation" id="Animation_ub7jc"]
 resource_name = "attack_side_1"
@@ -50,6 +95,20 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
 "update": 1,
 "values": [Vector2i(0, 2), Vector2i(1, 2), Vector2i(2, 2), Vector2i(3, 2), Vector2i(4, 2), Vector2i(5, 2)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.3),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"deal_damage_to_enemies"
+}]
 }
 
 [sub_resource type="Animation" id="Animation_63aui"]
@@ -67,6 +126,20 @@ tracks/0/keys = {
 "update": 1,
 "values": [Vector2i(0, 3), Vector2i(1, 3), Vector2i(2, 3), Vector2i(3, 3), Vector2i(4, 3), Vector2i(5, 3)]
 }
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.3),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"deal_damage_to_enemies"
+}]
+}
 
 [sub_resource type="Animation" id="Animation_f3c1p"]
 resource_name = "attack_up_1"
@@ -83,6 +156,20 @@ tracks/0/keys = {
 "update": 1,
 "values": [Vector2i(0, 6), Vector2i(1, 6), Vector2i(2, 6), Vector2i(3, 6), Vector2i(4, 6), Vector2i(5, 6)]
 }
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.3),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"deal_damage_to_enemies"
+}]
+}
 
 [sub_resource type="Animation" id="Animation_njljr"]
 resource_name = "attack_up_2"
@@ -98,6 +185,20 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
 "update": 1,
 "values": [Vector2i(0, 7), Vector2i(1, 7), Vector2i(2, 7), Vector2i(3, 7), Vector2i(4, 7), Vector2i(5, 7)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.3),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"deal_damage_to_enemies"
+}]
 }
 
 [sub_resource type="Animation" id="Animation_4cey8"]
@@ -138,6 +239,7 @@ tracks/0/keys = {
 _data = {
 "RESET": SubResource("Animation_yfkaq"),
 "attack_down_1": SubResource("Animation_bd6ma"),
+"attack_down_2": SubResource("Animation_m1moo"),
 "attack_side_1": SubResource("Animation_ub7jc"),
 "attack_side_2": SubResource("Animation_63aui"),
 "attack_up_1": SubResource("Animation_f3c1p"),
@@ -146,9 +248,14 @@ _data = {
 "run": SubResource("Animation_ffonl")
 }
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_wr8gx"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ddkc6"]
+radius = 52.0096
+
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_iaqna")
-speed = 6.0
+death_prefab = ExtResource("2_4t8jh")
 
 [node name="WarriorBlue" type="Sprite2D" parent="."]
 position = Vector2(0, -26)
@@ -166,3 +273,19 @@ debug_color = Color(0, 0.6, 0.701961, 0.27451)
 libraries = {
 "": SubResource("AnimationLibrary_o8fjo")
 }
+
+[node name="AttackArea" type="Area2D" parent="."]
+position = Vector2(0, -27)
+scale = Vector2(6.48041, 6.48041)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea"]
+scale = Vector2(1.35661, 1.35661)
+shape = SubResource("CircleShape2D_wr8gx")
+debug_color = Color(0.847059, 0, 0.25098, 0.101961)
+
+[node name="HitBoxArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBoxArea"]
+position = Vector2(1, -22)
+shape = SubResource("CircleShape2D_ddkc6")
+debug_color = Color(0.23314, 0.197633, 0.623362, 0.419608)
