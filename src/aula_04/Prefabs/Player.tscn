@@ -253,7 +253,7 @@ _data = {
 [sub_resource type="CircleShape2D" id="CircleShape2D_ddkc6"]
 radius = 52.0096
 
-[node name="Player" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D" groups=["player"]]
 script = ExtResource("1_iaqna")
 death_prefab = ExtResource("2_4t8jh")
 

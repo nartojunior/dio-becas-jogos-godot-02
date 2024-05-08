@@ -1,20 +1,26 @@
+class_name Player
 extends CharacterBody2D
 
 @export var attack_damage: int = 2
+@export var health_max: int = 100
 @export var health: int = 100
+
 @export var speed: float = 10
 @export_range(0.0, 3.0) var time_blink: float = 0.5
 
 @export var death_prefab: PackedScene
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var sprite: Sprite2D = $WarriorBlue
-@onready var attack_area:Area2D = $AttackArea
-@onready var hitbox_area:Area2D = $HitBoxArea
+@onready var attack_area: Area2D = $AttackArea
+@onready var hitbox_area: Area2D = $HitBoxArea
 
 var is_running: bool = false
 var is_attacking: bool = false
 var is_attack_1: bool = true
-var is_moving_right : bool = true;
+var is_moving_right: bool = true;
+
+
+
 var attack_cooldown: float = 2.0
 var hitbox_cooldown_elapsed: float
 
@@ -28,17 +34,17 @@ func _ready():
 
 func _process(delta: float) -> void:
 	GameManager.position = position
-	update_cooldown(delta)		
+	update_cooldown(delta)
 	
 	update_hitbox_detection(delta)
 	pass
 
-func update_cooldown(delta:float)->void:
+func update_cooldown(delta: float) -> void:
 	attack_cooldown -= delta
 
 	if attack_cooldown <= 0:
 		is_attacking = false
-		pass		
+		pass
 	pass
 
 func _physics_process(delta: float) -> void:
@@ -52,7 +58,7 @@ func _physics_process(delta: float) -> void:
 
 	pass
 
-func read_input(delta:float) -> void:
+func read_input(delta: float) -> void:
 
 	var input_vector = Input.get_vector("move_left", "move_right", "move_up", "move_down")
 	
@@ -124,12 +130,11 @@ func attack() -> void:
 
 	pass
 
-
 func deal_damage_to_enemies():
 	var corpses = attack_area.get_overlapping_bodies()
 	for corpse in corpses:
 		if corpse.is_in_group("enemies"):
-			var enemy : Enemy = corpse
+			var enemy: Enemy = corpse
 			var direction_to_enemy = (enemy.position - position).normalized()
 			'''
 			if sprite.flip_h:
@@ -145,8 +150,7 @@ func deal_damage_to_enemies():
 		pass
 	pass
 
-
-func damage(ammount:int) -> void:
+func damage(ammount: int) -> void:
 	if health <= 0: return
 	
 	health -= ammount
@@ -154,12 +158,11 @@ func damage(ammount:int) -> void:
 	
 	blink_damage()
 	
-	if (health <=0):
+	if (health <= 0):
 		die()
 	pass
 
-
-func die()->void:
+func die() -> void:
 	if death_prefab:
 		var death_object = death_prefab.instantiate()
 		death_object.position = position
@@ -169,6 +172,11 @@ func die()->void:
 
 	pass
 
+func heal(amount: int) -> void:
+	health += amount
+	if health > health_max:
+		health = health_max
+	pass
 
 func blink_damage():
 	modulate = Color.BLUE
@@ -178,7 +186,7 @@ func blink_damage():
 	tween.tween_property(self, "modulate", Color.WHITE, time_blink)
 	pass
 	
-func update_hitbox_detection(delta:float) -> void:
+func update_hitbox_detection(delta: float) -> void:
 	hitbox_cooldown_elapsed += delta
 
 	if (hitbox_cooldown_elapsed <= time_blink):
@@ -189,7 +197,7 @@ func update_hitbox_detection(delta:float) -> void:
 	var bodies = hitbox_area.get_overlapping_bodies()
 	for body in bodies:
 		if body.is_in_group("enemies"):
-			var enemy : Enemy = body
+			var enemy: Enemy = body
 			damage(enemy.attack_damage)
-		pass 
+		pass
 	pass

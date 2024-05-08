@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://3kkprrqp54y4"]
+[gd_scene load_steps=6 format=3 uid="uid://3kkprrqp54y4"]
 
 [ext_resource type="PackedScene" uid="uid://d0qj61w7gurak" path="res://Prefabs/Player.tscn" id="1_fmgas"]
 [ext_resource type="PackedScene" uid="uid://c0d08s1l6rufn" path="res://Prefabs/pawn.tscn" id="2_huhqv"]
 [ext_resource type="PackedScene" uid="uid://did62itdbuv08" path="res://Prefabs/goblin.tscn" id="3_6xnvu"]
 [ext_resource type="PackedScene" uid="uid://dw8c2eggty5m7" path="res://Prefabs/sheep.tscn" id="4_euis4"]
+[ext_resource type="PackedScene" uid="uid://cdqh0j6gdalh8" path="res://Prefabs/life_regen_prop.tscn" id="5_1utwc"]
 
 [node name="Main" type="Node2D"]
 
@@ -18,3 +19,6 @@ position = Vector2(982, 353)
 
 [node name="Sheep" parent="." instance=ExtResource("4_euis4")]
 position = Vector2(578, 345)
+
+[node name="LifeRengenProp" parent="." instance=ExtResource("5_1utwc")]
+position = Vector2(309, 512)
