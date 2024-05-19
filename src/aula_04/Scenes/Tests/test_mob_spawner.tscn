@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://bc25u6364r1t0"]
+
+[ext_resource type="PackedScene" uid="uid://d0qj61w7gurak" path="res://Prefabs/Player/player.tscn" id="1_0pe7f"]
+[ext_resource type="PackedScene" uid="uid://ctwxq0us63v1g" path="res://Prefabs/Managers/mob_spawner.tscn" id="2_cdgx2"]
+[ext_resource type="PackedScene" uid="uid://jym4qc2mmkx7" path="res://Prefabs/Player/ritual.tscn" id="3_1x126"]
+
+[node name="TestMobSpawner" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_0pe7f")]
+position = Vector2(551, 317)
+ritual_prefab = ExtResource("3_1x126")
+
+[node name="MobSpawner" parent="." instance=ExtResource("2_cdgx2")]

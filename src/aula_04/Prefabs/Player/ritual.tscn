@@ -1,0 +1,96 @@
+[gd_scene load_steps=14 format=3 uid="uid://jym4qc2mmkx7"]
+
+[ext_resource type="Script" path="res://Scripts/ritual.gd" id="1_8d522"]
+[ext_resource type="Texture2D" uid="uid://bxhsm7114at8e" path="res://Addons/Particles Kenney/star_05.png" id="1_p2t4b"]
+[ext_resource type="Texture2D" uid="uid://bintkpwqjb8hw" path="res://Addons/Particles Kenney/star_06.png" id="2_dcb87"]
+[ext_resource type="Texture2D" uid="uid://dyatseageivuu" path="res://Addons/Particles Kenney/star_07.png" id="3_y4yum"]
+[ext_resource type="Texture2D" uid="uid://bd38wdg05084x" path="res://Addons/Particles Kenney/star_08.png" id="4_8mec4"]
+[ext_resource type="Texture2D" uid="uid://cltmg2ynh6lbb" path="res://Addons/Particles Kenney/star_09.png" id="5_dgfvc"]
+[ext_resource type="Texture2D" uid="uid://h5tl52ty3hbf" path="res://Addons/Particles Kenney/symbol_01.png" id="6_h746x"]
+[ext_resource type="Texture2D" uid="uid://1q2l0h6sk03w" path="res://Addons/Particles Kenney/twirl_01.png" id="7_tqhuq"]
+[ext_resource type="Texture2D" uid="uid://b2qtwtduiaqqt" path="res://Addons/Particles Kenney/light_01.png" id="8_jgfif"]
+
+[sub_resource type="Animation" id="Animation_4kfhj"]
+resource_name = "Aura"
+length = 2.4
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Images/Twirl01:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4, 1.6, 1.8, 2, 2.2, 2.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, -0.523599, -1.0472, -1.5708, -2.0944, -2.61799, -3.14159, -3.66519, -4.18879, -4.71239, -5.23599, -5.75959, -6.28319]
+}
+
+[sub_resource type="Animation" id="Animation_2tigs"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Images/Twirl01:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3rkc7"]
+_data = {
+"Aura": SubResource("Animation_4kfhj"),
+"RESET": SubResource("Animation_2tigs")
+}
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jyfvh"]
+radius = 220.0
+
+[node name="Ritual" type="Node2D"]
+script = ExtResource("1_8d522")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_3rkc7")
+}
+autoplay = "Aura"
+
+[node name="Images" type="Node2D" parent="."]
+modulate = Color(0.832, 0.16, 1, 1)
+z_index = -10
+
+[node name="Star05" type="Sprite2D" parent="Images"]
+texture = ExtResource("1_p2t4b")
+
+[node name="Star06" type="Sprite2D" parent="Images"]
+texture = ExtResource("2_dcb87")
+
+[node name="Star07" type="Sprite2D" parent="Images"]
+texture = ExtResource("3_y4yum")
+
+[node name="Star08" type="Sprite2D" parent="Images"]
+texture = ExtResource("4_8mec4")
+
+[node name="Star09" type="Sprite2D" parent="Images"]
+texture = ExtResource("5_dgfvc")
+
+[node name="Symbol01" type="Sprite2D" parent="Images"]
+texture = ExtResource("6_h746x")
+
+[node name="Twirl01" type="Sprite2D" parent="Images"]
+texture = ExtResource("7_tqhuq")
+
+[node name="Light01" type="Sprite2D" parent="Images"]
+texture = ExtResource("8_jgfif")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+z_index = 50
+shape = SubResource("CircleShape2D_jyfvh")
+debug_color = Color(0, 0.6, 0.666667, 0.419608)
