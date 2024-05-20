@@ -54,7 +54,10 @@ sources/1 = SubResource("TileSetAtlasSource_s1p7w")
 y_sort_enabled = true
 script = ExtResource("1_hrai4")
 
+[node name="GameUI" parent="." instance=ExtResource("6_dkh4y")]
+
 [node name="TileMap" type="TileMap" parent="."]
+z_index = -10
 tile_set = SubResource("TileSet_aogl8")
 format = 2
 layer_0/name = "Ground"
@@ -79,6 +82,7 @@ position = Vector2(309, 512)
 position = Vector2(556, 512)
 
 [node name="Trees" type="Node2D" parent="."]
+z_index = 20
 y_sort_enabled = true
 
 [node name="Tree" parent="Trees" instance=ExtResource("9_pjvif")]
@@ -93,5 +97,3 @@ mobs_per_minute = 120
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(152, 230)
-
-[node name="GameUI" parent="." instance=ExtResource("6_dkh4y")]

@@ -13,6 +13,7 @@ extends CharacterBody2D
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	damage_digit_prefab = preload("res://Prefabs/UI/damage_digit_ui.tscn")
+	self.z_index = -1
 	pass # Replace with function body.
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

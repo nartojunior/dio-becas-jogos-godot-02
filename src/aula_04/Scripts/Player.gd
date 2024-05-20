@@ -46,6 +46,7 @@ func create_ritual() -> void:
 	var ritual = ritual_prefab.instantiate()
 	ritual.set_player(self)
 	add_child(ritual)
+	print("Ritual Z: ", ritual)
 	pass
 
 func _process(delta: float) -> void:

@@ -60,6 +60,7 @@ radius = 16.0
 height = 48.0
 
 [node name="Pawn" type="CharacterBody2D" groups=["enemies"]]
+z_index = 10
 script = ExtResource("1_mr6mm")
 attack_damage = 5
 death_prefab = ExtResource("2_27dvv")

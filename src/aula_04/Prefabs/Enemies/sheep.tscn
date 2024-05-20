@@ -60,6 +60,7 @@ radius = 19.0
 height = 38.0
 
 [node name="Sheep" type="CharacterBody2D" groups=["enemies"]]
+z_index = 10
 script = ExtResource("1_b8521")
 health = 1
 death_prefab = ExtResource("2_17h2o")
