@@ -7,3 +7,10 @@ Repositório que terá os projetos de jogos desenvolvidos para o Curso de Godot 
 
 * Godot 4.2 Standard
 * VS Code
+
+# Projetos
+
+* Aula 01
+* Aula 02
+* Aula 03
+* Aula 04 - projeto final do curso.
