@@ -15,17 +15,16 @@ point_count = 5
 position = Vector2(-20, 48)
 script = ExtResource("1_grsmi")
 mobs = Array[PackedScene]([ExtResource("2_no6fu"), ExtResource("3_w62l2"), ExtResource("4_hdtkw")])
-mobs_per_minute = 120
 
 [node name="Path2D" type="Path2D" parent="."]
-position = Vector2(29.62, -11.6179)
-scale = Vector2(0.6108, 0.559709)
+position = Vector2(-377.767, -181.281)
+scale = Vector2(1.06007, 0.928731)
 curve = SubResource("Curve2D_57oja")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
 unique_name_in_owner = true
 position = Vector2(-68.1401, -141.827)
-rotation = 0.00811679
+rotation = 0.00811639
 
 [node name="_Timer_42911" type="Timer" parent="Path2D/PathFollow2D"]
 wait_time = 0.2
