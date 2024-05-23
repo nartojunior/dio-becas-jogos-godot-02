@@ -12,6 +12,7 @@ var time_elapsed: float = 0.0;
 func _ready():
 	GameManager.collect_meat.connect(update_meat_amount)
 	update_meat_amount()
+	print("vish")
 	pass # Replace with function body.
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
