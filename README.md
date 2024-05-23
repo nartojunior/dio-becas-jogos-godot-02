@@ -17,4 +17,4 @@ Repositório que terá os projetos de jogos desenvolvidos para o Curso de Godot 
 
 # Onde jogar?
 
-* Itch.io: https://nartojunior.itch.io/dio-tiny-swords
+* Itch.io: [https://nartojunior.itch.io/dio-tiny-swords](https://nartojunior.itch.io/dio-tiny-swords){:target="_blank"} 
