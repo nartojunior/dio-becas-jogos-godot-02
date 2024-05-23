@@ -14,3 +14,7 @@ Repositório que terá os projetos de jogos desenvolvidos para o Curso de Godot 
 * Aula 02
 * Aula 03
 * Aula 04 - projeto final do curso.
+
+# Onde jogar?
+
+* Itch.io: https://nartojunior.itch.io/dio-tiny-swords
