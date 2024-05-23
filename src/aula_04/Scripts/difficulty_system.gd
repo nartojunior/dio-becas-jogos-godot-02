@@ -15,6 +15,8 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	if GameManager.game_over: return
+	
 	time += delta
 	# dificuldade linear
 	var spawn_rate = initial_spawn_rate + spawn_rate_per_minutes * (time / 60.0)

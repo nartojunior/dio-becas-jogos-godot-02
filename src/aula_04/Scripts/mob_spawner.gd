@@ -28,8 +28,8 @@ func _process(delta: float) -> void:
 	if GameManager.game_over:
 		can_spawn = false
 		pass
-		
-	cooldown_spawn(delta)
+	else:	
+		cooldown_spawn(delta)
 	pass
 
 func cooldown_spawn(delta: float):	
@@ -89,4 +89,5 @@ func check_valid_point(point: Vector2) -> bool:
 func mob_decrease():
 	print("Mob die... ", mobs_counter)
 	mobs_counter -= 1
+	GameManager.mobs_defeated += 1
 	pass

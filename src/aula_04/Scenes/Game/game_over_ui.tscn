@@ -1,5 +1,6 @@
-[gd_scene load_steps=12 format=3 uid="uid://bbkxn2j1y4gw7"]
+[gd_scene load_steps=13 format=3 uid="uid://bbkxn2j1y4gw7"]
 
+[ext_resource type="Script" path="res://Scripts/game_over_ui.gd" id="1_33aqw"]
 [ext_resource type="Texture2D" uid="uid://c1exb51ax4il8" path="res://Addons/Tiny Swords (Update 010)/UI/Ribbons/Ribbon_Red_3Slides.png" id="1_bni8h"]
 [ext_resource type="Texture2D" uid="uid://dhvvc4gdcstmn" path="res://Addons/Tiny Swords (Update 010)/UI/Banners/Banner_Horizontal.png" id="2_rko8d"]
 
@@ -123,6 +124,7 @@ _data = {
 }
 
 [node name="GameOverUI" type="CanvasLayer"]
+script = ExtResource("1_33aqw")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 anchors_preset = 15
@@ -170,7 +172,7 @@ anchor_bottom = 1.0
 offset_left = -289.0
 offset_top = -318.0
 offset_right = 289.0
-offset_bottom = -47.9987
+offset_bottom = -47.999
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_styles/panel = SubResource("StyleBoxTexture_u7045")

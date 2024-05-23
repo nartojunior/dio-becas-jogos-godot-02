@@ -1,7 +1,7 @@
 [gd_scene load_steps=18 format=3 uid="uid://3kkprrqp54y4"]
 
 [ext_resource type="PackedScene" uid="uid://d0qj61w7gurak" path="res://Prefabs/Player/player.tscn" id="1_fmgas"]
-[ext_resource type="Script" path="res://Scripts/AutoLoad/game_manager.gd" id="1_hrai4"]
+[ext_resource type="Script" path="res://Scripts/main.gd" id="1_hg6mr"]
 [ext_resource type="Texture2D" uid="uid://b1ijhxjagtphy" path="res://Addons/Tiny Swords (Update 010)/Terrain/Water/Water.png" id="3_0x8d1"]
 [ext_resource type="PackedScene" uid="uid://cdqh0j6gdalh8" path="res://Prefabs/Props/life_regen_prop.tscn" id="5_1utwc"]
 [ext_resource type="PackedScene" uid="uid://bf1fjkjodhrdd" path="res://Prefabs/UI/GameUI.tscn" id="6_dkh4y"]
@@ -71,9 +71,11 @@ size = Vector2(566, 1999)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ai8qc"]
 size = Vector2(557.5, 1982)
 
-[node name="Main" type="Node2D"]
+[node name="Main" type="Node2D" node_paths=PackedStringArray("game_ui")]
 y_sort_enabled = true
-script = ExtResource("1_hrai4")
+script = ExtResource("1_hg6mr")
+game_ui = NodePath("GameUI")
+game_over_ui_template = ExtResource("10_0jm02")
 
 [node name="GameUI" parent="." instance=ExtResource("6_dkh4y")]
 
@@ -89,6 +91,8 @@ layer_1/tile_data = PackedInt32Array()
 [node name="Player" parent="." instance=ExtResource("1_fmgas")]
 y_sort_enabled = true
 position = Vector2(152, 230)
+health_max = 10
+health = 1
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="Player"]
 remote_path = NodePath("../../Camera2D")
@@ -147,5 +151,3 @@ debug_color = Color(0.829538, 0.38947, 0.158053, 0.42)
 position = Vector2(2531.25, 359)
 shape = SubResource("RectangleShape2D_ai8qc")
 debug_color = Color(0.905335, 0.304118, 0.0145374, 0.42)
-
-[node name="GameOverUI" parent="." instance=ExtResource("10_0jm02")]

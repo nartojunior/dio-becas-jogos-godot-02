@@ -13,6 +13,9 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta) -> void:
+	if GameManager.game_over: return
+	
+	
 	var player_position =  GameManager.position
 	var direction = (player_position - enemy.position).normalized()
 	enemy.velocity  = direction * speed * 100
