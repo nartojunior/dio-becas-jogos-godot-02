@@ -7,21 +7,25 @@
 
 [sub_resource type="Curve2D" id="Curve2D_57oja"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, -137, -161, 0, 0, 0, 0, 1347, -199, 0, 0, 0, 0, 1350, 788, 0, 0, 0, 0, -166, 773, 0, 0, 0, 0, -148, -161)
+"points": PackedVector2Array(0, 0, 0, 0, -68.1401, -141.827, 0, 0, 0, 0, 1912.87, -125.748, 0, 0, 0, 0, 1901.41, 1121.33, 0, 0, 0, 0, -50.131, 1153.49, 0, 0, 0, 0, -68.1401, -97.1614)
 }
 point_count = 5
 
 [node name="MobSpawner" type="Node2D"]
+position = Vector2(-20, 48)
 script = ExtResource("1_grsmi")
 mobs = Array[PackedScene]([ExtResource("2_no6fu"), ExtResource("3_w62l2"), ExtResource("4_hdtkw")])
+mobs_per_minute = 120
 
 [node name="Path2D" type="Path2D" parent="."]
+position = Vector2(29.62, -11.6179)
+scale = Vector2(0.6108, 0.559709)
 curve = SubResource("Curve2D_57oja")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
 unique_name_in_owner = true
-position = Vector2(-137, -161)
-rotation = -0.0256009
+position = Vector2(-68.1401, -141.827)
+rotation = 0.00811679
 
 [node name="_Timer_42911" type="Timer" parent="Path2D/PathFollow2D"]
 wait_time = 0.2

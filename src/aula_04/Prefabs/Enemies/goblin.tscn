@@ -1,6 +1,7 @@
-[gd_scene load_steps=13 format=3 uid="uid://did62itdbuv08"]
+[gd_scene load_steps=14 format=3 uid="uid://did62itdbuv08"]
 
 [ext_resource type="Script" path="res://Scripts/enemy.gd" id="1_1aujd"]
+[ext_resource type="PackedScene" uid="uid://cdqh0j6gdalh8" path="res://Prefabs/Props/life_regen_prop.tscn" id="2_33283"]
 [ext_resource type="PackedScene" uid="uid://b6qrfrd8c6b1x" path="res://Prefabs/Misc/skull.tscn" id="2_x8rhe"]
 [ext_resource type="Texture2D" uid="uid://cn6rm82wfhk0e" path="res://Addons/Tiny Swords (Update 010)/Factions/Goblins/Troops/Torch/Yellow/Torch_Yellow.png" id="3_n6f0b"]
 [ext_resource type="Script" path="res://Scripts/follow_player.gd" id="4_rmdvx"]
@@ -64,6 +65,8 @@ z_index = 10
 script = ExtResource("1_1aujd")
 health = 15
 attack_damage = 10
+drop_chance = 0.2
+loot_table = Array[PackedScene]([ExtResource("2_33283")])
 death_prefab = ExtResource("2_x8rhe")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]

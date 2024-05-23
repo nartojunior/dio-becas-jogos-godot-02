@@ -3,6 +3,7 @@ extends Node
 var position:Vector2
 var game_over: bool = false
 var meat_amount_collected: int = 0
+@export var max_mobs_count = 100
 
 signal collect_meat
 

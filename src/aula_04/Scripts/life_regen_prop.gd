@@ -1,8 +1,10 @@
 extends Node2D
 
 @export var regen_amount: int = 10
+@export var agora: RegenType
 @onready var area_2d: Area2D = $Area2D
 
+enum RegenType {Minimum, Good}
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	$Area2D.body_entered.connect(on_body_entered)
@@ -10,7 +12,6 @@ func _ready():
 	pass # Replace with function body.
 
 func on_body_entered(body: Node2D):
-	print(body)
 	if body.is_in_group("player"):
 		var player: Player = body
 		player.heal(regen_amount)
